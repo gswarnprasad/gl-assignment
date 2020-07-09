@@ -1,0 +1,35 @@
+.gl-profile-card {
+    position: relative;
+    background: map-get($map: $colors, $key: white);
+    border-radius: 10px;
+    box-shadow: outset 0 0 10px map-get($map: $colors, $key: grey);
+    &--orangebg {
+        background: map-get($map: $colors, $key: orange);
+        height: 65px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &--details {
+        text-align: center;
+        top: -41px;
+        position: relative;
+        &--img {
+            width: 82px;
+            height: 82px;
+            border-radius: 41px;
+        }
+        &--list {
+            padding: 0 25px;
+            &--items {
+                padding: 20px 0;
+                list-style: none;
+                span {
+                    float: left;
+                }
+                strong {
+                    float: right;
+                }
+            }
+        }
+    }
+}

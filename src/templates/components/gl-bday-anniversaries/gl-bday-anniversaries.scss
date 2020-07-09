@@ -1,0 +1,69 @@
+.gl-bday-anniversaries {
+    background: map-get($map: $colors, $key: white);
+    border-radius: 5px;
+    box-shadow: outset 0 0 10px map-get($map: $colors, $key: grey);
+    &--heading {
+        font-size: 14p;
+        font-weight: bold;
+        border-bottom: 2px solid map-get($map: $colors, $key: light-grey);
+        padding: 20px
+    }
+    &--faces {
+        min-height: 100px;
+        padding: 10px;
+        &--carousel {
+            margin-top: 30px;
+            &--list {
+                margin: 0 auto;
+                display: flex;
+                &--items {
+                    list-style: none;
+                    float: left;
+                    padding: 10px;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 25px;
+                    }
+                    &:after {
+                        content: '';
+                        background: url(../img/birthday.png);
+                        background-repeat: no-repeat;
+                        width: 26px;
+                        height: 26px;
+                        display: inline-block;
+                        padding-right: 10px;
+                        background-size: 30px;
+                        right: -35px;
+                        position: relative;
+                        top: -55px;
+                    }
+                }
+            }
+            &--controls {
+                width: 100%;
+                top: 25px;
+                position: relative;
+                &--prev {
+                    float: left;
+                }
+                &--next {
+                    float: right;
+                }
+            }
+        }
+    }
+    &--view {
+        margin: 0 auto;
+        padding: 20px;
+        border-top: 2px solid map-get($map: $colors, $key: light-grey);
+        text-align: center;
+        a {
+            color: map-get($map: $colors, $key: orange);
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

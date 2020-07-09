@@ -1,0 +1,98 @@
+$list-style-type: none;
+$list-margin-bottom: 0;
+$list-style-position: outside;
+$list-side-margin: 0;
+$list-nested-side-margin: 1.25rem;
+$defnlist-margin-bottom: 1rem;
+$defnlist-term-margin-bottom: 0.3rem;
+$defnlist-term-weight: bold;
+$paragraph-margin-bottom: 0;
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 1px solid map-get($colors, black);
+$cite-pseudo-content: '\2014 \0020';
+//
+//DP Typography Resets
+//
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+// Paragraphs
+p {
+    margin-bottom: $paragraph-margin-bottom;
+    font-size: inherit;
+}
+
+// Emphasized text
+em,
+i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+// Strong text
+strong,
+b {
+    font-weight: bold;
+    line-height: inherit;
+}
+
+// Small text
+small {
+    font-size: 10px;
+    line-height: inherit;
+}
+
+// Links
+a {
+    line-height: inherit;
+    cursor: pointer;
+    img {
+        border: 0;
+    }
+}
+
+// Lists
+ul,
+ol,
+dl {
+    margin-bottom: $list-margin-bottom;
+    list-style-position: $list-style-position;
+}
+
+li {
+    font-size: inherit;
+}
+html,
+body {
+    background: map-get($map: $colors, $key: bgcolor);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}

@@ -1,0 +1,126 @@
+.gl-header {
+    background: map-get($map: $colors, $key: grey);
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    @include respond-to('medium') {
+        min-height: 100px;
+    }
+    &--hamburger{
+        display: inline-block;
+        @include respond-to('medium') {
+            display: none;
+        }
+        img{
+            width:30px;
+            height: 30px;
+            float: right;
+            margin: 10px;
+        }
+    }
+    &--logo-panel {
+        width: 10%;
+        flex: 1;
+    }
+    &--search-panel {
+        width: 70%;
+        display: none;
+        @include respond-to('medium') {
+            display: block;
+        }
+        &--search-type {
+            float: left;
+            background: #fff;
+            padding: 10px;
+            margin: 0px;
+            width: 100px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            &--list {
+                float: left;
+                list-style: none;
+            }
+            a{
+                float: right;
+            }
+        }
+        label{
+            position: relative;
+            a{
+                position: absolute;
+                right: 15px;
+                top: 0px;
+                text-decoration: none;
+                color: map-get($map: $colors, $key: orange );
+            }
+        }
+        &--search-box {
+            width: 90%;
+            padding: 11px 0;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            top: -2px;
+            position: relative;
+            padding-left: 12px;
+            @include respond-to('medium') {
+                width: 80%;
+            }
+            @include respond-to('large') {
+                width: 80%;
+            }
+            @include respond-to('xlarge') {
+                width: 90%;
+            }
+        }
+        &--menu {
+            &--items {
+                float: left;
+                list-style: none;
+                padding: 5px 15px;
+                &:last-first {
+                    padding-left: 0px;
+                }
+                a {
+                    color: map-get($map: $colors, $key: white);
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &--user-panel {
+        padding: 10px 40px;
+        width: 20%;
+        display: none;
+        @include respond-to('medium') {
+            display: block;
+        }
+        &--users {
+            float: right;
+            &--options {
+                padding-right: 20px;
+            }
+            &--profile {
+                img {
+                    border-radius: 15px;
+                }
+            }
+        }
+        &--social-media {
+            display: block;
+            clear: both;
+            float: right;
+            &--list {
+                margin: 0px;
+                &--item {
+                    float: left;
+                    list-style: none;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

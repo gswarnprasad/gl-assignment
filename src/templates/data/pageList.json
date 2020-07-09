@@ -1,0 +1,53 @@
+{
+    "pages": [
+        {
+            "pageName": "Templates",
+            "childPage": true,
+            "page": [{
+                "name": "Homepage GL",
+                "url": "home.html"
+            }]
+        },
+        {
+            "pageName": "Components",
+            "childPage": true,
+            "page": [
+                {
+                    "name": "Header",
+                    "url": "gl-header.html"
+                },
+                {
+                    "name": "Profile card",
+                    "url": "gl-profile-card.html"
+                },
+                {
+                    "name": "Advertisement",
+                    "url": "gl-advertisement.html"
+                },
+                {
+                    "name": "Share status",
+                    "url": "gl-share-status.html"
+                },
+                {
+                    "name": "Referals Rotations",
+                    "url": "gl-referals-rotations.html"
+                },
+                {
+                    "name": "Award",
+                    "url": "gl-award.html"
+                },
+                {
+                    "name": "Birthday and Anniversaries",
+                    "url": "gl-bday-anniversaries.html"
+                },
+                {
+                    "name": "Recent Photos",
+                    "url": "gl-recent-photos.html"
+                }
+
+
+            ]
+        }
+        
+    ]
+}

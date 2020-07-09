@@ -1,0 +1,55 @@
+// Colours used in design
+$colors: ( 
+    white: #ffffff,
+    bgcolor: #ececec,
+    black: #000000,
+    grey: #424142,
+    orange: #f37038,
+    dark-grey: #333333, 
+    light-grey: #dddddd, 
+    light-grey-1: #f3f3f3, 
+    cream-white: #f8f8f8
+);
+// Mixin to create classes from colours, eg text--tan, background--tan
+@mixin modifiers($map, $attribute, $prefix: '--', $separator: '-', $base: 'base') {
+    @each $key,
+    $value in $map {
+        &#{if($key != $base, #{$prefix}#{$key},
+        '')
+    }
+    {
+        @if type-of($value)=='map' {
+            @include modifiers($value,
+            $attribute,
+            $separator);
+        }
+        @else {
+            #{$attribute}: $value;
+        }
+    }
+}
+
+}
+
+$breakpoints: ( 
+    small: 0px,
+    medium: 767px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+   
+    // If the key doesn't exist in the map
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+  }

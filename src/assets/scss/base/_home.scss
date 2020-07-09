@@ -1,0 +1,32 @@
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include respond-to('medium') {
+        width: 1460px;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+    .container {
+        margin:20px 10px;
+        
+    }
+    &--left-pannel {
+        width: 100%;
+        @include respond-to('medium') {
+            width: 25%;
+        }
+    }
+    &--center-pannel {
+        width: 100%;
+        @include respond-to('medium') {
+            width: 50%;
+        }
+    }
+    &--right-pannel {
+        width: 100%;
+        @include respond-to('medium') {
+            width: 25%;
+        }
+    }
+}

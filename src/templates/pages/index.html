@@ -1,0 +1,106 @@
+<style>
+    .index-page-container {
+        margin: 10px auto;
+    }
+    
+    @media print,
+    screen and (min-width: 64em) {
+        .index-page-container {
+            margin: 40px auto;
+        }
+    }
+    
+    .index-page-wrapper {
+        border: 1px solid #F5F5F5;
+    }
+    
+    .index-page-heading {
+        background: #F5F5F5;
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .index-page-heading .sub-heading {
+        margin-top: 10px;
+    }
+    
+    .index-page-content .cell {
+        padding: 5px 0;
+        background: #F5F5F5;
+        padding: 10px 20px;
+        border: 1px solid #ffffff;
+    }
+    
+    .index-page-content .cell:hover {
+        background: #ffffff;
+    }
+    
+    .index-page-content h4 {
+        margin-top: 12px;
+        margin-bottom: 3px;
+        padding-left: 3px;
+        background: #ddd;
+        color: #888;
+    }
+    
+    .index-page-content h5 {
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    
+    .index-page-content li {
+        list-style: none;
+    }
+    
+    .index-page-content li a {
+        display: block;
+        padding: 5px 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 18px;
+        padding-left: 3px;
+        color: #006c49;
+    }
+    
+    .index-page-content li a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<main class="index-page-container">
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell">
+                <div class="index-page-wrapper">
+                    <div class="index-page-heading">
+                        <h4 class="main-heading"><img src="/assets/img/logo.png" width="40px">
+                            </h3>
+                            <!-- <p class="sub-heading">Index Page</p> -->
+                    </div>
+                    <div class="index-page-content">
+                        <div class="grid-x grid-padding-x">
+                            {{#each (sortPageData pageList.pages)}}
+                            <div class="cell medium-3">
+                                {{#if childPage}}
+                                <h5>{{pageName}}</h5>
+                                <ul>
+                                    {{#each page}}
+                                    <li>
+                                        {{#unless alpha}}<a href="{{url}}">{{name}}</a>{{else}}
+                                        <h4>{{alpha}}</h4>
+                                        {{/unless}}
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                                <a href="{{url}}">{{name}}</a>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

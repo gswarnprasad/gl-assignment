@@ -1,0 +1,67 @@
+.gl-award {
+    box-shadow: outset 0 0 10px map-get($map: $colors, $key: grey);
+    &--profile {
+        padding: 40px 20px 10px 20px;
+        background: map-get($map: $colors, $key: white);
+        &--image-block {
+            &--img {
+                width: 74px;
+                height: 74px;
+                border-radius: 37px;
+                float: left;
+                top: -20px;
+                position: relative;
+            }
+            &:after {
+                content: '';
+                background: url(../img/trophy.png);
+                background-repeat: no-repeat;
+                width: 26px;
+                height: 26px;
+                display: inline-block;
+                padding-right: 10px;
+                background-size: 30px;
+                left: -16px;
+                position: relative;
+            }
+        }
+        &--name {
+            padding-left: 45px;
+            color: map-get($map: $colors, $key: orange);
+            top: -30px;
+            position: relative;
+        }
+        &--info {
+            display: block;
+            padding-left: 120px;
+            top: -20px;
+            position: relative;
+        }
+    }
+    &--commenter {
+        background: map-get($map: $colors, $key: light-grey-1);
+        border: 1px solid map-get($map: $colors, $key: light-grey);
+        height: 70px;
+        display: flex;
+        align-items: flex-start;
+        padding-left: 30px;
+        &--img {
+            width: 50px;
+            height: 50px;
+            border-radius: 37px;
+            float: left;
+            top: 10px;
+            position: relative;
+            margin-right: 20px;
+        }
+        &--label {
+            width: 93%;
+            margin-top: 10px;
+            &--input {
+                width: 95%;
+                margin-top: 10px;
+                padding: 8px;
+            }
+        }
+    }
+}

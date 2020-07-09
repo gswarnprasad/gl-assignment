@@ -1,0 +1,67 @@
+.gl-recent-photos{
+    background: map-get($map: $colors, $key: white);
+    border-radius: 5px;
+    box-shadow: outset 0 0 10px map-get($map: $colors, $key: grey);
+    &--heading {
+        font-size: 14p;
+        font-weight: bold;
+        border-bottom: 2px solid map-get($map: $colors, $key: light-grey);
+        padding: 20px
+    }
+    &--faces{
+        &--count{
+            border: 1px solid map-get($map: $colors, $key: light-grey);
+            padding: 5px 10px;
+            margin: 10px;
+        }
+        &--list{
+            padding: 10px;
+            &--items{
+                list-style: none;
+                display: inline-block;
+                img{
+                    width: 75px;
+                    height: 75px;
+                }
+                &:first-child{
+                    img{
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+    }
+    &--pagination{
+        padding: 10px;
+        &--list{
+            margin: 0 auto;
+            text-align: center;
+            &--items{
+                list-style: none;
+                display: inline-block;
+                border-bottom: 1px solid map-get($map: $colors, $key: light-grey );
+                border-top: 1px solid map-get($map: $colors, $key: light-grey );
+                border-right: 1px solid map-get($map: $colors, $key: light-grey );
+                margin: 0;
+                padding: 5px;
+                margin-left: -4px;
+                a{
+                    color: map-get($map: $colors, $key: grey );
+                    text-decoration: none;
+                }
+                &.active{
+                    a{
+                        color: map-get($map: $colors, $key: orange );
+                    }
+                }
+               
+                &:first-child{
+                    border-left: 1px solid map-get($map: $colors, $key: light-grey );
+                }
+            }
+        }
+    }
+
+}

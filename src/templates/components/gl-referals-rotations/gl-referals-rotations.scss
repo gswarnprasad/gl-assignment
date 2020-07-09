@@ -1,0 +1,85 @@
+.tabs {
+    position: relative;
+    clear: both;
+    height: 350px;
+    @include respond-to('medium') {
+        height: 280px;
+    }
+    &--tab {
+        float: left;
+        &--content {
+            position: absolute;
+            background-color: #fff;
+            left: 0;
+            width: 100%;
+            border: 1px solid map-get($map: $colors, $key: cream-white);
+            top: 38px;
+            padding: 20px;
+            &--add-referral {
+                display: flex;
+                flex-direction: row;
+                border: 1px solid map-get($map: $colors, $key: light-grey);
+                margin-top: 20px;
+                padding: 20px;
+                &--track {
+                    width: 100%;
+                    @include respond-to('medium') {
+                        width: 50%;
+                    }
+                    h2 {
+                        margin-bottom: 20px;
+                    }
+                }
+                &--ref-amount {
+                    width: 50%;
+                    text-align: right;
+                    @include respond-to('medium') {
+                        width: 100%;
+                    }
+                    button {
+                        margin-bottom: 10px;
+                        background: map-get($map: $colors, $key: orange);
+                        border: none;
+                        color: map-get($map: $colors, $key: white);
+                        padding: 15px 20px;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    strong {
+                        display: block;
+                    }
+                }
+                &--show-more {
+                    color: map-get($map: $colors, $key: orange);
+                    padding-top: 10px;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+        &--checkboxtab {
+            display: none;
+            &:checked~label {
+                color: map-get($map: $colors, $key: grey);
+                border-bottom: 2px solid map-get($map: $colors, $key: orange);
+                background: map-get($map: $colors, $key: white);
+                padding-left: 20px;
+                padding-right: 20px;
+                height: 38px;
+                display: inline-block;
+                padding-top: 10px;
+            }
+            &:checked~.tabs--tab--content {
+                z-index: 1;
+            }
+        }
+        label {
+            margin-right: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 38px;
+            display: inline-block;
+            padding-top: 10px;
+        }
+    }
+}

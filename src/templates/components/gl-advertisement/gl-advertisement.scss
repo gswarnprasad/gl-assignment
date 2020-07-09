@@ -4,8 +4,20 @@
     display: flex;
     flex-direction: row;
     box-shadow: outset 0 0 10px map-get($map: $colors, $key: grey);
+    flex-wrap: wrap;
+    @include respond-to('xlarge') {
+        flex-wrap: nowrap;
+    }
     &--img{
         padding: 30px 10px;
+        margin: 0 auto;
+        @include respond-to('xlarge') {
+            width: 200%;
+        }
+        img{
+            width: 100%;
+        }
+        
     }
     &--text {
         font-size: 30px;

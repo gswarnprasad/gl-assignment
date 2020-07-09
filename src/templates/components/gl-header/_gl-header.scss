@@ -9,7 +9,7 @@
     }
     &--hamburger{
         display: inline-block;
-        @include respond-to('medium') {
+        @include respond-to('large') {
             display: none;
         }
         img{
@@ -26,7 +26,7 @@
     &--search-panel {
         width: 70%;
         display: none;
-        @include respond-to('medium') {
+        @include respond-to('large') {
             display: block;
         }
         &--search-type {
@@ -95,7 +95,7 @@
         padding: 10px 40px;
         width: 20%;
         display: none;
-        @include respond-to('medium') {
+        @include respond-to('large') {
             display: block;
         }
         &--users {
@@ -118,7 +118,7 @@
                 &--item {
                     float: left;
                     list-style: none;
-                    padding-left: 10px;
+                    padding-left: 8px;
                 }
             }
         }

@@ -2,8 +2,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     @include respond-to('medium') {
-        width: 1460px;
+        max-width: 1460px;
         margin: 0 auto;
         flex-direction: row;
     }
@@ -13,19 +14,19 @@
     }
     &--left-pannel {
         width: 100%;
-        @include respond-to('medium') {
+        @include respond-to('large') {
             width: 25%;
         }
     }
     &--center-pannel {
         width: 100%;
-        @include respond-to('medium') {
+        @include respond-to('large') {
             width: 50%;
         }
     }
     &--right-pannel {
         width: 100%;
-        @include respond-to('medium') {
+        @include respond-to('large') {
             width: 25%;
         }
     }

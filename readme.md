@@ -18,5 +18,4 @@ Task to run SCSS and JS Lint
 ```sh
 $ npm run lint
 ```
-# global-logic-assignment
-# gl-assignment
+
